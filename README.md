@@ -1,5 +1,5 @@
 # Personal Website
 
-[Simeon-Skopalik.github.io](Simeon-Skopalik.github.io)
+https://simeon-skopalik.github.io/
 
 
