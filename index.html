@@ -1,103 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simeon Skopalik</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f6f7;
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
-    }
-    .card {
-      background: #ffffff;
-      padding: 3rem 3.5rem;
-      border-radius: 18px;
-      box-shadow: 0 6px 28px rgba(0,0,0,0.1);
-      max-width: 900px;
-      width: 95%;
-      margin: 2rem 0;
-      text-align: center;
-    }
-    h1 {
-      margin-bottom: 0;
-      font-size: 2.4rem;
-      font-weight: bold;
-      line-height: 1.2;
-    }
-    h2 {
-      margin-top: 6px;
-      color: #666;
-      font-weight: normal;
-      font-size: 1.2rem;
-      line-height: 1.4;
-    }
-    p {
-      margin-top: 1.5rem;
-      font-size: 1.05rem;
-      color: #555;
-      line-height: 1.6;
-    }
-    h3 {
-      font-size: 1.3rem;
-      color: #444;
-      margin-bottom: 1rem;
-    }
-    .tiles {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.2rem;
-    }
-    .tile {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.9rem 1rem;
-      background: #fafafa;
-      border-radius: 12px;
-      text-decoration: none;
-      color: inherit;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-      word-break: break-word;
-    }
-    .tile:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-    }
-    .tile img {
-      width: 32px;
-      height: 32px;
-      flex-shrink: 0;
-    }
-    .tile span {
-      font-size: 0.95rem;
-      line-height: 1.4;
-      overflow-wrap: anywhere;
-    }
-    iframe {
-      border-radius: 14px;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Simeon Skopalik</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f6f7;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Main Card */
+
+.card {
+  background: #ffffff;
+  padding: 3rem 3.5rem;
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  max-width: 950px;
+  width: 95%;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+/* Name & Title — EXACTLY AS YOU HAD */
+
+h1 {
+  margin-bottom: 0;
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+h2 {
+  margin-top: 6px;
+  color: #666;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+p {
+  margin-top: 1.8rem;
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Section Headings */
+
+.section {
+  margin-top: 3.5rem;
+  text-align: left;
+}
+
+.section h3 {
+  font-size: 1.35rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+/* Tiles */
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.3rem;
+}
+
+.tile {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1.1rem 1.2rem;
+  background: #ffffff;
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #e6e6e6;
+  transition: all 0.25s ease;
+}
+
+.tile:hover {
+  transform: translateY(-5px);
+  border-color: #d1d5db;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.tile img {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+.tile span {
+  font-size: 0.96rem;
+  line-height: 1.45;
+  color: #444;
+}
+
+/* Video Styling */
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+  margin-bottom: 2rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.video-wrapper:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .card {
+    padding: 2rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+</style>
 </head>
+
 <body>
-  <div class="card">
+<div class="card">
 
-    <h1>Simeon Skopalik</h1>
-    <h2>MEng (Hons), PhD, CEng, MIMechE</h2>
+  <h1>Simeon Skopalik</h1>
+  <h2>MEng (Hons), PhD, CEng, MIMechE</h2>
 
-    <p>This website is currently under construction. A more detailed portfolio will be available soon.</p>
+  <p>
+    This website is currently under construction. A more detailed portfolio will be available soon.
+  </p>
 
-    <div style="margin-top:2.5rem; text-align:left;">
-      <h3>As featured in</h3>
+  <!-- Featured Section -->
+  <div class="section">
+    <h3>As Featured In</h3>
 
-      <div class="tiles">
+    <div class="tiles">
         <a class="tile" href="https://www.search-for-intellectual-property.service.gov.uk/GB2642215" target="_blank">
           <img src="https://www.google.com/s2/favicons?domain=service.gov.uk&sz=64" alt="UK Patent" />
           <span>UK Patent – Rheological Measurement System</span>
@@ -156,24 +222,26 @@
         </a>
       </div>
 
-      <div style="margin-top:2.5rem;">
-        <iframe width="100%" height="360" src="https://www.youtube.com/embed/UdiF_pDpQfI"
-          title="YouTube KTP Video" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
+  <!-- Videos Section -->
+  <div class="section">
+    <h3>Media</h3>
 
-      <div style="margin-top:2.5rem;">
-        <iframe width="100%" height="360" src="https://www.youtube.com/watch?v=78gT5o2LCMs"
-          title="YouTube KTP Associates" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
-      
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/UdiF_pDpQfI"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/78gT5o2LCMs"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
     </div>
 
   </div>
+
+</div>
 </body>
 </html>
