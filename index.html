@@ -54,6 +54,47 @@ p {
   line-height: 1.6;
 }
 
+/* Profile Buttons */
+
+.profile-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.4rem;
+}
+
+.profile-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.2rem;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #444;
+  font-size: 0.96rem;
+  transition: all 0.25s ease;
+}
+
+.profile-btn:hover {
+  transform: translateY(-3px);
+  border-color: #d1d5db;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.profile-btn:focus-visible {
+  outline: 2px solid #444;
+  outline-offset: 2px;
+}
+
+.profile-btn img {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
 /* Section Headings */
 
 .section {
@@ -154,6 +195,17 @@ p {
 
   <h1>Simeon Skopalik</h1>
   <h2>MEng (Hons), PhD, CEng, MIMechE</h2>
+
+  <div class="profile-links">
+    <a class="profile-btn" href="https://www.linkedin.com/in/sskopalik/" target="_blank" rel="noopener">
+      <img src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=64" alt="" />
+      <span>LinkedIn</span>
+    </a>
+    <a class="profile-btn" href="https://github.com/Simeon-Skopalik" target="_blank" rel="noopener">
+      <img src="https://www.google.com/s2/favicons?domain=github.com&sz=64" alt="" />
+      <span>GitHub</span>
+    </a>
+  </div>
 
   <p>
     This website is currently under construction. A more detailed portfolio will be available soon.
